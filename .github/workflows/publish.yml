@@ -14,6 +14,10 @@ jobs:
       with:
         text: ${{ github.event.head_commit.message }}
         regex: '^Release ([0-9]+\.[0-9]+\.[0-9]+)'
+    - uses: actions-ecosystem/action-push-tag@v1
+      if: ${{ steps.regex-match.outputs.match != '' }}
+      with:
+        tag: ${{ steps.regex-match.outputs.group1 }}
     - name: Checkout repository
       if: ${{ steps.regex-match.outputs.match != '' }}
       uses: actions/checkout@master
@@ -34,6 +38,8 @@ jobs:
       if: ${{ steps.regex-match.outputs.match != '' }}
       uses: softprops/action-gh-release@v1
       with:
+        tag_name: ${{ steps.regex-match.outputs.match }}
+        release_name: Release ${{ steps.regex-match.outputs.match }}
         files: |
           build/hyproxy-linux
           build/hyproxy-macos
