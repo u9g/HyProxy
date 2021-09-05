@@ -1,15 +1,15 @@
 # HyProxy
 
-What does this do?
+## What does this do?
 
 - bypass mod restrictions on lunar client
 - bypass mod restrictions on badlion client
 
-Want something added? Make an issue
+### Want something added? Make an issue
 
-Discord? https://discord.gg/76QqK3QmR4
+### Discord? https://discord.gg/76QqK3QmR4
 
-How to install:
+## How to install:
 
 1. go here: https://github.com/u9g/HyProxy/releases
 2. download the one for your os
