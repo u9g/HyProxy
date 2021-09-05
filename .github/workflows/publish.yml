@@ -38,8 +38,8 @@ jobs:
       if: ${{ steps.regex-match.outputs.match != '' }}
       uses: softprops/action-gh-release@v1
       with:
-        tag_name: ${{ steps.regex-match.outputs.match }}
-        release_name: Release ${{ steps.regex-match.outputs.match }}
+        tag_name: ${{ steps.regex-match.outputs.group1 }}
+        release_name: Release ${{ steps.regex-match.outputs.group1 }}
         files: |
           build/hyproxy-linux
           build/hyproxy-macos
