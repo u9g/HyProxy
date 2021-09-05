@@ -7,6 +7,8 @@ What does this do?
 
 Want something added? Make an issue
 
+Discord? https://discord.gg/76QqK3QmR4
+
 How to install:
 
 1. go here: https://github.com/u9g/HyProxy/releases
