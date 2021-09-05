@@ -2,7 +2,8 @@
 
 What does this do?
 
-- bypass freelook protection on lunar client
+- bypass mod restrictions on lunar client
+- bypass mod restrictions on badlion client
 
 Want something added? Make an issue
 

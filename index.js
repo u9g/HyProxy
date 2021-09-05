@@ -28,8 +28,9 @@ const proxy = new Proxy({
 })
 
 proxy.on('incoming', (data, meta, toClient, toServer) => {
-  if (meta.name === 'custom_payload' && data.channel === 'MC|Brand') {
-    data.data = Buffer.from('<XeBungee (git:XeBungee-Bootstrap:1.16-R0.5-SNAPSHOT:a2e1df4)') // hack to re-enable freelook on lunar
+  if (meta.name === 'custom_payload') {
+    if (data.channel === 'badlion:mods') return
+    else if (data.channel === 'MC|Brand') data.data = Buffer.from('<XeBungee (git:XeBungee-Bootstrap:1.16-R0.5-SNAPSHOT:a2e1df4)') // hack to re-enable freelook on lunar
   }
   toClient.write(meta.name, data)
 })
