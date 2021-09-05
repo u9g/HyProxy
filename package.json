@@ -11,7 +11,7 @@
   "license": "MIT",
   "dependencies": {
     "minecraft-proxy-handler": "^0.2.0",
-    "pkg": "^5.2.1",
+    "pkg": "5.2.1",
     "typed-emitter": "github:andywer/typed-emitter",
     "yaml": "^1.10.2"
   }
