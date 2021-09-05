@@ -1,0 +1,18 @@
+{
+  "name": "hyproxy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "pkg index.js --out-path build"
+  },
+  "keywords": [],
+  "author": "u9g <winworkswow@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "minecraft-proxy-handler": "^0.2.0",
+    "pkg": "^5.2.1",
+    "typed-emitter": "github:andywer/typed-emitter",
+    "yaml": "^1.10.2"
+  }
+}
