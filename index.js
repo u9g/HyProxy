@@ -38,7 +38,6 @@ proxy.on('incoming', (data, meta, toClient, toServer) => {
 
 proxy.on('outgoing', (data, meta, toClient, toServer) => {
   if (meta.name === 'custom_payload') {
-    console.log(`[OUT] [${data.channel}] :${(data?.data).toString('utf8')}:`)
     if (data.channel === 'MC|Brand') {
       data.data = Buffer.from('\7vanilla')
     } else return
