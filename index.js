@@ -38,7 +38,7 @@ proxy.on('incoming', (data, meta, toClient, toServer) => {
 proxy.on('outgoing', (data, meta, toClient, toServer) => {
   if (meta.name === 'custom_payload') {
     if (data.channel === 'MC|Brand') {
-      data.data = Buffer.from('\7vanilla')
+      data.data = Buffer.from('\x07vanilla')
     } else return
   }
   toServer.write(meta.name, data)
