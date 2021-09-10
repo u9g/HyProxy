@@ -29,13 +29,18 @@ const proxy = new Proxy({
 
 proxy.on('incoming', (data, meta, toClient, toServer) => {
   if (meta.name === 'custom_payload') {
-    if (data.channel === 'badlion:mods') return
+    if (data.channel === 'badlion:mods' || data.channel === 'FML|HS' || data.channel === 'FML') return
     else if (data.channel === 'MC|Brand') data.data = Buffer.from('<XeBungee (git:XeBungee-Bootstrap:1.16-R0.5-SNAPSHOT:a2e1df4)') // hack to re-enable freelook on lunar
   }
   toClient.write(meta.name, data)
 })
 
 proxy.on('outgoing', (data, meta, toClient, toServer) => {
+  if (meta.name === 'custom_payload') {
+    if (data.channel === 'MC|Brand') {
+      data.data = Buffer.from('\x07vanilla')
+    } else return
+  }
   toServer.write(meta.name, data)
 })
 
