@@ -4,6 +4,8 @@
 
 - bypass mod restrictions on lunar client
 - bypass mod restrictions on badlion client
+- spoof a vanilla client
+- doesn't send forge modids
 
 ### Want something added? Make an issue
 
